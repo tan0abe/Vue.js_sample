@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script src="s1.js"></script> -->
+  <script src="udemy/vue_exam/vue.js"></script>
+
+  <div id="app">
+    <p>{{ message }}</p>
+    <p>{{ number + 10 }}</p>
+    <p>{{ ok ? "yes" : "no" }}</p>
+    <p>{{ sayHi() }}</p>
+    <button v-on:click="reverseMessage">メッセージ反転</button>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        message: "Hello World!",
+        number: 3,
+        ok: false
+      },
+      methods: {
+        sayHi: function () {
+          return "Hi";
+        }
+      },
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split("").reverse().join("");
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
