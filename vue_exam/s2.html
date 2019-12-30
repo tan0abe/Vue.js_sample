@@ -9,9 +9,12 @@
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="vue.js"></script>
   <div id="app">
     <p>{{ message }}</p>
+    <!-- <p>{{ number +5 }}</p>
+    <p>{{ ok ? 'yes' : 'no' }}</p> -->
+    <p>{{ sayHi() }}</p>
     <button v-on:click="reverseMessage">メッセージ反転</button>
   </div>
   <script src="s2.js"></script>

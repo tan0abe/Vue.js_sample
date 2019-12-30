@@ -1,7 +1,9 @@
 new Vue({
   el: "#app",
   data: {
-    message: "hello"
+    message: "hello",
+    number: 3,
+    ok: true
   },
   methods: {
     reverseMessage: function() {
@@ -9,6 +11,10 @@ new Vue({
         .split("")
         .reverse()
         .join("");
+    },
+    sayHi: function() {
+      this.message = "hello VueJS";
+      return this.message;
     }
   }
 });
